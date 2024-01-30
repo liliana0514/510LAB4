@@ -12,10 +12,10 @@
 Put the following in your requirements.txt file
 ```
 streamlit
+
 ```
 Open the terminal and run the following commands:
 ```
-pip install -r requirements.txt 
 pip install streamlit
 pip install pytz
 ```
