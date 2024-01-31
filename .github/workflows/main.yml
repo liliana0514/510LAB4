@@ -1,9 +1,9 @@
 name: run hello.py
 
 on:
-    workflow_dispatch:
-    schedule:
-        - cron: '*/30 * * * *' # At 00:00 on Monday
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *' # At 00:00 on Monday
 
 jobs:
   build:
