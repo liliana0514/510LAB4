@@ -22,4 +22,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script
+<<<<<<< HEAD
         run: python hello.py
+=======
+        run: python hello.py
+>>>>>>> 25fdca61110ad250a4da1886ec4c83a675235d2b
