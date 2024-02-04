@@ -24,9 +24,6 @@ jobs:
         # Assuming you have a requirements.txt for the scraper
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Execute hello.py
-      run: python hello.py # Run the hello.py script
-
     - name: execute py script # run main.py
       run: python hello.py
 
