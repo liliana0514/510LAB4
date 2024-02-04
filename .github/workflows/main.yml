@@ -1,26 +1,34 @@
-name: run hello.py
+# .github/workflows/main.yml
+name: Run Python Scripts
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual trigger of the action
   schedule:
-    - cron: '*/30 * * * *' # At 00:00 on Monday
+    - cron: '*/30 * * * *' # Runs every 30 minutes
 
 jobs:
-  build:
+  run_hello:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content
+    - name: Checkout repo content
+      uses: actions/checkout@v2 # Checks out the repository content to the runner
 
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10' # install the python version needed
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' # Specify the Python version
 
-      - name: install python packages
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Assuming you have a requirements.txt for the scraper
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: execute py script # run main.py
-        run: python hello.py
+    - name: Execute hello.py
+      run: python hello.py # Run the hello.py script
+
+    # Bonus: Integrating the web scraper script
+    - name: Execute scraper script
+      run: python app.py # Replace scraper_script.py with your actual scraper file name
+      env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }} # Use secrets for sensitive data
