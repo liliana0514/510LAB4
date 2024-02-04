@@ -20,6 +20,10 @@ venv
 Put the following in your requirements.txt file
 ```
 streamlit
+yfinance
+pandas
+pytz
+psycopg2-binary
 ```
 
 Open the terminal and run the following commands:
