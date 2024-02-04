@@ -27,6 +27,9 @@ jobs:
     - name: Execute hello.py
       run: python hello.py # Run the hello.py script
 
+    - name: execute py script # run main.py
+      run: python hello.py
+
     # Bonus: Integrating the web scraper script
     - name: Execute scraper script
       run: python app.py # Replace scraper_script.py with your actual scraper file name
