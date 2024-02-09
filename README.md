@@ -3,12 +3,7 @@
 Real-time streamlit
 
 ## Overview
-Hi! This is the repository for my personal To-Do list for TECHIN 510.  
-------This code outlines a Streamlit web application for managing tasks, showcasing the use of SQLite for storage, Pydantic for data validation, and Streamlit for the web interface.  
-------It demonstrates key concepts like database operations, form handling, and dynamic content update in a web app.
-------datetime.ipynb: This notebook contains the code for the datetime exercise.
-------regex.ipynb: This notebook contains the code for the regex exercise.
-------app.py: Example world clock app.
+Hi! This is the repository for my Real-time streamlit for TECHIN 510.   
 
 ## How to Run
 
